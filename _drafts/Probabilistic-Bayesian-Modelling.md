@@ -1,6 +1,7 @@
 ---
+layout: draft
 title: Probabilistic and Bayesian Modelling
-sitemap: no
+sitemap: false
 ---
 
 The lecture presents an advanced study of probabilistic models which are widely used in Machine Learning and AI. These models can deal with uncertainties and prior knowledge in a principled way and can be adapted to a given problem by learning from training examples. 
