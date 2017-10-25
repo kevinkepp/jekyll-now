@@ -1,0 +1,37 @@
+---
+layout:       page
+title:        Drafts
+permalink:    /drafts/
+meta_robots:  noindex
+sitemap:      false
+---
+
+<p>These are draft posts for previewing.</p>
+
+<div class="posts">
+  {% assign sorted = site.drafts | sort: 'date' | reverse %}
+  {% for draft in sorted %}
+    <div class="post py2">
+
+      {% if site.date_format %}<p class="post-meta h5">{{ draft.date | date: site.date_format }}</p>{% endif %}
+
+      <h3 class="post-title"><a href="{{ site.baseurl }}{{ draft.url }}" class="post-link">{{ draft.title }}</a></h3>
+
+      <div class="entry">
+        {{ draft.excerpt }}
+      </div>
+
+      {% if draft.categories.size > 0 %}
+        <span class="post-meta small">
+
+          {% for category in draft.categories %}
+            <a href="{{ category }}" class="category">{{ category }}</a>
+          {% endfor %}
+        
+        </span>
+      {% endif %}
+
+    </div>
+  {% endfor %}
+
+</div>

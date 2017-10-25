@@ -16,3 +16,11 @@
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="twitter:title" content="{{ page.title }}" />
     {% endif %}
+
+    {% if page.meta_robots %}
+    <meta name="robots" content="{{ page.meta_robots }}">
+    {% elsif layout.meta_robots %}
+    <meta name="robots" content="{{ layout.meta_robots }}">
+    {% else %}
+    <meta name="robots" content="all">
+    {% endif %}

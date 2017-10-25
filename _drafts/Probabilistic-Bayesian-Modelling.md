@@ -1,9 +1,12 @@
-# Overview
+---
+title: Probabilistic and Bayesian Modelling
+sitemap: no
+---
 
 The lecture presents an advanced study of probabilistic models which are widely used in Machine Learning and AI. These models can deal with uncertainties and prior knowledge in a principled way and can be adapted to a given problem by learning from training examples. 
 We will discuss the basic ideas and the computational techniques using a variety of applications.
 
-https://isis.tu-berlin.de/2.0/course/view.php?id=10097
+[https://isis.tu-berlin.de/2.0/course/view.php?id=10097](https://isis.tu-berlin.de/2.0/course/view.php?id=10097)
 
 # Topics
 
@@ -26,4 +29,3 @@ https://isis.tu-berlin.de/2.0/course/view.php?id=10097
 - Bayesian Reasoning and Machine Learning, David Barber, Cambridge University Press, 2012.
 - Machine Learning - A probabilistic Perspective, Kevin P. Murphy, The MIT Press, 2012.
 - Advanced Mean Field Methods, M Opper and D Saad (eds.), The MIT Press, 2001.
-

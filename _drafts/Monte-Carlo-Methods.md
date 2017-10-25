@@ -1,8 +1,11 @@
-# Overview
+---
+title: Monte Carlo Methods
+sitemap: false
+---
 
 Monte Carlo simulation plays an prominent role in statistics, machine learning and statistical physics. This lecture will give an overview of classical and more recent methods and their applications. Topics will include rejection and importance sampling, sequential Monte Carlo methods (particle filters) and Markov chain Monte Carlo techniques such as the Gibbs sampler, the Metropolis Hastings method, exact sampling and Hamiltonian Monte Carlo. 
 
-https://isis.tu-berlin.de/course/view.php?id=10098
+[https://isis.tu-berlin.de/course/view.php?id=10098](https://isis.tu-berlin.de/course/view.php?id=10098)
 
 # Topics
 

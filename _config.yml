@@ -84,3 +84,17 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+
+collections:
+  drafts:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: "/_drafts"
+    values:
+      type: draft
+      layout: draft
+      meta_robots:  noindex
+      sitemap: false
