@@ -6,7 +6,7 @@
 name: Kevin Kepp
 
 # Short bio or description (displayed in the header)
-description: Machine Learning Enthusiast from Berlin, Germany
+description: Machine Learning student from Berlin, Germany
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars3.githubusercontent.com/u/787153?s=460&v=4
@@ -73,7 +73,7 @@ sass:
   style: :expanded # You might prefer to minify using :compressed
 
 # Use the following plug-ins
-gems:
+plugins:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
 
@@ -93,6 +93,6 @@ defaults:
   -
     scope:
       path: ""
-      type: draft
+      type: drafts
     values:
       layout: draft
