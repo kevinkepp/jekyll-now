@@ -1,6 +1,6 @@
 ---
-layout: draft
 title: Monte Carlo Methods
+layout: draft
 sitemap: false
 ---
 
@@ -8,7 +8,7 @@ Monte Carlo simulation plays an prominent role in statistics, machine learning a
 
 [https://isis.tu-berlin.de/course/view.php?id=10098](https://isis.tu-berlin.de/course/view.php?id=10098)
 
-# Topics
+## Topics
 
 - Inverse Transformation Method
 - Rejection Sampling / Importance Sampling
@@ -19,7 +19,7 @@ Monte Carlo simulation plays an prominent role in statistics, machine learning a
 - Thermodynamic Integration
 - Parallel Tempering
 
-# Literature
+## Literature
 
 - Information Theory, Inference, and Learning Algorithms, David J C MacKay, Cambridge University Press.
 - Pattern Recognition and Machine Learning, Christopher M. Bishop, Springer, 2006.

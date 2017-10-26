@@ -1,6 +1,6 @@
 ---
-layout: draft
 title: Probabilistic and Bayesian Modelling
+layout: draft
 sitemap: false
 ---
 
@@ -9,7 +9,7 @@ We will discuss the basic ideas and the computational techniques using a variety
 
 [https://isis.tu-berlin.de/2.0/course/view.php?id=10097](https://isis.tu-berlin.de/2.0/course/view.php?id=10097)
 
-# Topics
+## Topics
 
 - Model Parameter Estimation by Maximum Likelihood
 - Independent Component Analysis
@@ -23,7 +23,7 @@ We will discuss the basic ideas and the computational techniques using a variety
 - Variational Methods
 - Latent Dirichlet Allocation
 
-# Literature
+## Literature
 
 - Pattern Recognition and Machine Learning, Christopher M. Bishop, Springer, 2006.
 - Information Theory, Inference, and Learning Algorithms, David J C MacKay, Cambridge University Press, 2003.
