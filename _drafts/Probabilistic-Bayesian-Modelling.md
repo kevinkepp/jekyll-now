@@ -1,6 +1,6 @@
 ---
-title: Probabilistic and Bayesian Modelling
 layout: draft
+title: Probabilistic and Bayesian Modelling
 sitemap: false
 ---
 
