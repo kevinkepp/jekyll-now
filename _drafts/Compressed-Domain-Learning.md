@@ -8,17 +8,17 @@ The purpose of this post is to give an overview of different methods on how to t
 The goal of these techniques is to reduce resources needed to train neural networks, for example, in order to use them in resource-constraint environments like on embedded devices, but also to make training generally more efficient and thus faster.
 We focus mainly on compression techniques such as quantization of weights, activations and/or gradients during training.
 
-## Background
+## I. Background
 
 
 ### Quantization
 
-[TODO]
+[TODO...]
 [TODO discretization]
 
 ### Reduced Precision
 
-[TODO]
+[TODO...]
 
 ### Fixed-point Format
 
@@ -37,7 +37,7 @@ Often, the bit width of the fractional part is also referred to as precision.
 [TODO relation to quantization and precision]
 
 
-## Quantization Techniques to Compress NNs
+## II. Overview Quantization for DNNs
 
 [Hashemi et al. (2016)](#s24) give an overview of the impact of precision quantization on the accuracy and energy of neural networks.
 [TODO extend]
@@ -105,14 +105,14 @@ Furthermore, they provide global/local convergence guarantees for convex/non-con
 [TODO called TernGrad]
 [TODO extend]
 
-[Lian at al. (2017)](#s19) [TODO]
+[Lian at al. (2017)](#s19) [TODO...]
 
 ### Other
 
 [Han et al. (2015)](#s10) train the network to learn which connections are important, prune the unimportant connections and then fine-tune the weights of the remaining connections.
 [TODO extend]
 
-[Esser et al. (2015)](#s20) [TODO]
+[Esser et al. (2015)](#s20) [TODO...]
 
 [Chen et al. (2015)](#s13) enforce random weight sharing, depending on memory constraints, using a hash map.
 They exploit the redundancy in neural network parameters as described for example by [(Denil et al., 2013)](#s14).
@@ -129,7 +129,7 @@ This mixed precision idea is used by the latest generation of NVIDIA GPUs ("Volt
 The memory consumption can be reduced by ~2x.
 
 
-### Not Categorized Yet [TODO]
+### Not Categorized Yet [TODO...]
 
 [Chen et all. (2017)](#s22)
 
@@ -137,7 +137,36 @@ The memory consumption can be reduced by ~2x.
 
 [Anonymous (2017)](#s18)
 
-## Sources
+## III. Quantization and Noise
+
+[TODO...]
+
+
+### Bayesian Methods for Training NNs
+
+[TODO why combine Bayesian methods and DNNs?]
+
+[TODO intro from [Li et al.(2015)](#s27)]
+
+[Welling and Teh (2011)](#s26) introduce Stochastic Gradient Langevin Dynamics, a Stochastic Gradient Markov Chain Monte Carlo (
+SG-MCMC) method which combines of Stochastic Gradient Descent (SGD) and Langevin Dynamics.
+Adding Gaussian noise with the right variance allows the optimization process to converge to the full posterior over the network parameters instead of just to the mode, i.e. the maximum a posteriori (MAP) estimate, as SGD would do.
+Thus, the parameter uncertainty is retained and the network is less likely to overfit the data.
+They apply the algorithm to logistic regression, ICA, etc.
+
+However, as [Li et al.(2015)](#s27)] describe, this approach is inefficient when used to train DNNs because of the pathological curvature and saddle points.
+This can be tackled with preconditioning methods such as including local geometry, i.e. second-order information such as the expected Fisher information, but usually do not scale well enough for training DNNs.
+[Li et al.(2015)](#s27)] introduce preconditioned SGLD (pSGLD) which efficiently preconditions SGLD [TODO how?].
+
+### Gradient Quantization as Gaussian noise
+
+Idea: Quantization of stochastic Gradients as additional Gaussian noise.
+Allows for application of Langevin dynamics framework.
+
+[TODO...]
+
+
+## IV. Sources
 <a name="s1"></a>Gupta, S., Agrawal, A., Gopalakrishnan, K. and Narayanan, P. (2015). **Deep Learning with Limited Numerical Precision**. [_arXiv:1502.02551_](https://arxiv.org/abs/1502.02551).
 
 <a name="s2"></a>Chen, X., X. Hu, H. Zhou, and N. Xu (2017). **FxpNet: Training a Deep Convolutional Neural Network in Fixed-Point Representation**. _In 2017 International Joint Conference on Neural Networks (IJCNN), Pp. 2494–2501_.
@@ -187,3 +216,8 @@ The memory consumption can be reduced by ~2x.
 <a name="s24"></a>Hashemi et al... (2016). **Understanding the Impact of Precision Quantization on the Accuracy and Energy of Neural Networks**.
 
 <a name="s25"></a>Narodytska et al... (2017). **Verifying Properties of Binarized Deep Neural Networks**.
+
+<a name="s26"></a>Welling, M. and Teh, Y. W. (2011). **Bayesian Learning via Stochastic Gradient Langevin Dynamics**. _In Proceedings of the 28th International Conference on International Conference on Machine Learning, pp. 681–688_.
+
+<a name="s27"></a>Li, C., Chen, C., Carlson, D., & Carin, L. (2015). **Preconditioned Stochastic Gradient Langevin Dynamics for Deep Neural Networks**. _[arXiv:1512.07666](http://arxiv.org/abs/1512.07666)_.
+
