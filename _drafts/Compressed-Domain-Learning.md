@@ -10,7 +10,6 @@ We focus mainly on compression techniques such as quantization of weights, activ
 
 ## I. Background
 
-
 ### Quantization
 
 [TODO...]
@@ -137,36 +136,8 @@ The memory consumption can be reduced by ~2x.
 
 [Anonymous (2017)](#s18)
 
-## III. Quantization and Noise
 
-[TODO...]
-
-
-### Bayesian Methods for Training NNs
-
-[TODO why combine Bayesian methods and DNNs?]
-
-[TODO intro from [Li et al.(2015)](#s27)]
-
-[Welling and Teh (2011)](#s26) introduce Stochastic Gradient Langevin Dynamics, a Stochastic Gradient Markov Chain Monte Carlo (
-SG-MCMC) method which combines of Stochastic Gradient Descent (SGD) and Langevin Dynamics.
-Adding Gaussian noise with the right variance allows the optimization process to converge to the full posterior over the network parameters instead of just to the mode, i.e. the maximum a posteriori (MAP) estimate, as SGD would do.
-Thus, the parameter uncertainty is retained and the network is less likely to overfit the data.
-They apply the algorithm to logistic regression, ICA, etc.
-
-However, as [Li et al.(2015)](#s27)] describe, this approach is inefficient when used to train DNNs because of the pathological curvature and saddle points.
-This can be tackled with preconditioning methods such as including local geometry, i.e. second-order information such as the expected Fisher information, but usually do not scale well enough for training DNNs.
-[Li et al.(2015)](#s27)] introduce preconditioned SGLD (pSGLD) which efficiently preconditions SGLD [TODO how?].
-
-### Gradient Quantization as Gaussian noise
-
-Idea: Quantization of stochastic Gradients as additional Gaussian noise.
-Allows for application of Langevin dynamics framework.
-
-[TODO...]
-
-
-## IV. Sources
+## III. Sources
 <a name="s1"></a>Gupta, S., Agrawal, A., Gopalakrishnan, K. and Narayanan, P. (2015). **Deep Learning with Limited Numerical Precision**. [_arXiv:1502.02551_](https://arxiv.org/abs/1502.02551).
 
 <a name="s2"></a>Chen, X., X. Hu, H. Zhou, and N. Xu (2017). **FxpNet: Training a Deep Convolutional Neural Network in Fixed-Point Representation**. _In 2017 International Joint Conference on Neural Networks (IJCNN), Pp. 2494–2501_.
@@ -216,8 +187,3 @@ Allows for application of Langevin dynamics framework.
 <a name="s24"></a>Hashemi et al... (2016). **Understanding the Impact of Precision Quantization on the Accuracy and Energy of Neural Networks**.
 
 <a name="s25"></a>Narodytska et al... (2017). **Verifying Properties of Binarized Deep Neural Networks**.
-
-<a name="s26"></a>Welling, M. and Teh, Y. W. (2011). **Bayesian Learning via Stochastic Gradient Langevin Dynamics**. _In Proceedings of the 28th International Conference on International Conference on Machine Learning, pp. 681–688_.
-
-<a name="s27"></a>Li, C., Chen, C., Carlson, D., & Carin, L. (2015). **Preconditioned Stochastic Gradient Langevin Dynamics for Deep Neural Networks**. _[arXiv:1512.07666](http://arxiv.org/abs/1512.07666)_.
-
