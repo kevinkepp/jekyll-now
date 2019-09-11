@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About
-permalink: /about/
 ---
 
 I'm studying Computer Science at [Technical University Berlin](https://www.tu-berlin.de) with focus on machine learning theory and applications.
