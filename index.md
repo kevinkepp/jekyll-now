@@ -1,11 +1,27 @@
 ---
-layout: page
-title: About
+layout: default
 ---
 
-I'm studying Computer Science at [Technical University Berlin](https://www.tu-berlin.de) with focus on machine learning theory and applications.
-I currently work at the [machine learning group](https://www.hhi.fraunhofer.de/en/departments/vca/research-groups/machine-learning.html) of [Fraunhofer HHI](https://www.hhi.fraunhofer.de/) on my Master's thesis about efficient neural networks.
+<div class="posts">
+	{% assign about = site.pages | where: "title", "About" %}
+	<article class="post">
+		<h1>About</h1>
 
-### Contact me
+		<div class="entry">
+        	{{ about }}
+		</div>
+	</article>
 
-mail[at]kevinkepp.de
+  	{% for post in site.posts %}
+    	<article class="post">
+
+			<h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+			<div class="entry">
+	        	{{ post.content }}
+			</div>
+
+			<!--<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>-->
+		</article>
+	{% endfor %}
+</div>
