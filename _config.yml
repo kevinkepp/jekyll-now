@@ -18,12 +18,12 @@ avatar: https://avatars3.githubusercontent.com/u/787153?s=460&v=4
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: mail&#064;kevinkepp&#046;de
   facebook:
   flickr:
   github: kevinkepp
   instagram:
-  linkedin:
+  linkedin: kevinkepp
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: keppkevin
@@ -91,8 +91,7 @@ collections:
     output: true
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: drafts
     values:
